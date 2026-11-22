@@ -34,5 +34,24 @@
 </div>
 <div id="scrim"></div>
 <div id="toast" role="status"></div>
-</body>
+</body
+  const WORKER_URL = "jarvis.o28948477.workers.dev.<your-subdomain>.workers.dev";
+
+async function askGemini(promptText) {
+  const response = await fetch(WORKER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt: promptText }),
+  });
+
+  const data = await response.json();
+  const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+  return reply || "কোনো উত্তর পাওয়া যায়নি।";
+}
+
+
+Ai code ta ki post korbo
+
+
+Ai code a ki ki change kortay hobay and ki ki detay hobay
 </html>
