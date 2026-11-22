@@ -1,0 +1,130 @@
+/* colors.css - every color of JARVIS lives here. Change a color here and it changes everywhere. */
+:root{
+  --bg:#f3f4fa;
+  --bg2:#f7f8fd;
+  --glass:rgba(255,255,255,.78);
+  --line:rgba(60,70,120,.1);
+  --ink:#1d2433;
+  --mute:#69718a;
+  --acc:#4f6bed;
+  --acc2:#8a63f2;
+  --ok:#2e9a56;
+  --warn:#b8731a;
+  --bad:#c0392b;
+  --sh:0 10px 30px rgba(70,80,140,.1);
+  --r:20px;
+  --g1:#cfe3ff;
+  --g2:#e7dcff;
+  --g3:#ffe5d0;
+  --surface:#fff;
+  --on-acc:#fff;
+  --orb-hl:#fff;
+  --orb-1:#b9c8ff;
+  --orb-shade:rgba(60,40,160,.35);
+  --glow-s:color-mix(in srgb,var(--acc) 28%,transparent);
+  --glow-m:color-mix(in srgb,var(--acc) 38%,transparent);
+  --glow-l:color-mix(in srgb,var(--acc) 50%,transparent);
+  --ring-soft:color-mix(in srgb,var(--acc2) 14%,transparent);
+  --chip-bg:rgba(255,255,255,.7);
+  --fchip-bg:rgba(255,255,255,.75);
+  --fchip-fg:#1d2433;
+  --scrim:rgba(20,25,50,.35);
+  --code-bg:rgba(120,130,170,.18);
+  --sg-g-bg:#e6f6ea;
+  --sg-g-fg:#237a43;
+  --sg-b-bg:#e5eeff;
+  --sg-b-fg:#2f5fcf;
+  --sg-p-bg:#efe8ff;
+  --sg-p-fg:#6a42d4;
+  --sg-o-bg:#fff0e1;
+  --sg-o-fg:#c2661c;
+}
+/* Dark theme */
+:root[data-t="dark"]{
+  --bg:#0d1220;
+  --bg2:#141b2e;
+  --glass:rgba(26,34,56,.8);
+  --line:rgba(170,185,240,.14);
+  --ink:#e9edf8;
+  --mute:#98a3c0;
+  --acc:#7b93ff;
+  --acc2:#a98bff;
+  --ok:#4cd18b;
+  --warn:#f0b34a;
+  --bad:#ff7b72;
+  --sh:0 10px 30px rgba(0,0,0,.4);
+  --g1:#1b2d52;
+  --g2:#2a2150;
+  --g3:#3a2a2a;
+  --surface:var(--bg2);
+  --on-acc:#fff;
+  --orb-hl:#fff;
+  --orb-1:#b9c8ff;
+  --orb-shade:rgba(20,10,80,.45);
+  --glow-s:color-mix(in srgb,var(--acc) 28%,transparent);
+  --glow-m:color-mix(in srgb,var(--acc) 38%,transparent);
+  --glow-l:color-mix(in srgb,var(--acc) 50%,transparent);
+  --ring-soft:color-mix(in srgb,var(--acc2) 14%,transparent);
+  --chip-bg:rgba(255,255,255,.12);
+  --fchip-bg:rgba(255,255,255,.12);
+  --fchip-fg:var(--ink);
+  --scrim:rgba(0,0,0,.55);
+  --code-bg:rgba(160,170,210,.2);
+  --sg-g-bg:#1d3a2b;
+  --sg-g-fg:#7fe0a6;
+  --sg-b-bg:#1d2c52;
+  --sg-b-fg:#8fb4ff;
+  --sg-p-bg:#2d2352;
+  --sg-p-fg:#c0a6ff;
+  --sg-o-bg:#3d2a1c;
+  --sg-o-fg:#ffb77a;
+}
+/* Adaptive theme follows the phone setting */
+@media(prefers-color-scheme:dark){
+:root[data-t="auto"]{
+  --bg:#0d1220;
+  --bg2:#141b2e;
+  --glass:rgba(26,34,56,.8);
+  --line:rgba(170,185,240,.14);
+  --ink:#e9edf8;
+  --mute:#98a3c0;
+  --acc:#7b93ff;
+  --acc2:#a98bff;
+  --ok:#4cd18b;
+  --warn:#f0b34a;
+  --bad:#ff7b72;
+  --sh:0 10px 30px rgba(0,0,0,.4);
+  --g1:#1b2d52;
+  --g2:#2a2150;
+  --g3:#3a2a2a;
+  --surface:var(--bg2);
+  --on-acc:#fff;
+  --orb-hl:#fff;
+  --orb-1:#b9c8ff;
+  --orb-shade:rgba(20,10,80,.45);
+  --glow-s:color-mix(in srgb,var(--acc) 28%,transparent);
+  --glow-m:color-mix(in srgb,var(--acc) 38%,transparent);
+  --glow-l:color-mix(in srgb,var(--acc) 50%,transparent);
+  --ring-soft:color-mix(in srgb,var(--acc2) 14%,transparent);
+  --chip-bg:rgba(255,255,255,.12);
+  --fchip-bg:rgba(255,255,255,.12);
+  --fchip-fg:var(--ink);
+  --scrim:rgba(0,0,0,.55);
+  --code-bg:rgba(160,170,210,.2);
+  --sg-g-bg:#1d3a2b;
+  --sg-g-fg:#7fe0a6;
+  --sg-b-bg:#1d2c52;
+  --sg-b-fg:#8fb4ff;
+  --sg-p-bg:#2d2352;
+  --sg-p-fg:#c0a6ff;
+  --sg-o-bg:#3d2a1c;
+  --sg-o-fg:#ffb77a;
+}
+}
+/* Mood colors of the orb */
+.orb[data-m=happy]{--o1:#ffe29a;--o2:#ff9f43}
+.orb[data-m=sad]{--o1:#a9c4ff;--o2:#3f5fb5}
+.orb[data-m=angry]{--o1:#ffb3a7;--o2:#e0483a}
+.orb[data-m=stress]{--o1:#d9c6ff;--o2:#7a4fe0}
+.orb[data-m=tired]{--o1:#cfe0e8;--o2:#6d8fa3}
+.orb[data-m=lonely]{--o1:#bfe3ff;--o2:#4a90c2}

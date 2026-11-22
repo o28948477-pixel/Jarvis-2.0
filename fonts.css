@@ -1,0 +1,7 @@
+/* fonts.css - fonts and base text size. Change the font here and it changes everywhere. */
+:root{
+  --font:system-ui,-apple-system,"Segoe UI","Noto Sans Bengali","Hind Siliguri",sans-serif;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+  --fs:15px;
+  --lh:1.55;
+}
